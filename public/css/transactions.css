@@ -1,0 +1,16 @@
+.transactions-list {
+    font-size: 1.2rem;
+
+    .transaction-item {
+        margin-top: 2rem;
+        width: 50%;
+        min-width: 400px;
+        background-color: var(--slate-700);
+        padding: 0.5rem 2rem;
+        border-radius: 0.5rem;
+    }
+
+    & span {
+        font-weight: bold;
+    }
+}

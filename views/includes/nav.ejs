@@ -1,0 +1,31 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <% if(isAuth) { %>
+            <li><a href="/user/account">Your Account</a></li>
+        <% } %>
+    </ul>
+    <ul>
+        <li>
+            <% if(!isAuth) { %>
+                <a href="/user/signup">Sign Up</a></li>
+                <li>
+                    <a href="/user/login">Login</a>
+                </li>
+            <% } %>
+        <% if(isAuth) { %>
+            <li>
+                <form class="form--logout" action="/user/logout" method="post">
+                    <button class="btn--logout" type="submit">Logout</button>       
+                </form>
+            </li>
+            <li>
+                <a href="/user/profile">
+                    <img src="\<%= pfp %>" alt="avatar" width="50" height="50" style="border-radius: 50%;">
+                </a>
+            </li>
+        <% } %>
+    </ul>
+</nav>

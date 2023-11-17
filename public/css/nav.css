@@ -1,0 +1,13 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: var(--slate-800);
+
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}

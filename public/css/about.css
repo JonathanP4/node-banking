@@ -1,0 +1,27 @@
+article {
+    display: grid;
+    padding: 2rem 3rem;
+    grid-template-columns: 1fr;
+
+    & section {
+        max-width: 34rem;
+
+        &:nth-of-type(even) {
+            justify-self: end;
+            margin: -12rem 0;
+        }
+    }
+
+    & h1 {
+        font-size: 2.5rem;
+    }
+
+    & p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    & img {
+        border-radius: 0.5rem;
+    }
+}

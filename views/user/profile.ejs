@@ -1,0 +1,31 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <main>
+        <% if(message) { %>
+            <p class="msg--error"><%= message %></p>
+        <% } %>
+        <div class="form-control">
+            <h1>Profile</h1>
+            <center>
+                <img src="\<%= pfp %>" alt="profile picture" width="200" style="margin-top: 1rem;">
+            </center>
+            <form action="/user/profile" method="post" novalidate enctype="multipart/form-data">
+                <div class="input-control">
+                    <label for="image">Profile picture</label>
+                    <input type="file" id="image" name="image"/>
+                </div>
+                <div class="input-control">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="<%= user.username %>"/>
+                </div>
+                <input type="hidden" name="old_pic" value="<%= pfp %>">
+                <button type="submit">Update</button>
+            </form> 
+        </div>
+    </main>
+</body>
+</html>

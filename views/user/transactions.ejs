@@ -1,0 +1,24 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/transactions.css">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <main>
+        <h1>Transaction Details</h1>
+        <ul class="transactions-list">
+            <% if(transactions.length > 0 ) { %>
+                <% transactions.forEach(t => { %>
+                    <li class="transaction-item">
+                            <p><span>User:</span> <%= t.to %></p>
+                            <p><span>Date & Time:</span> <%= t.date %> at <%= t.time %></p>
+                            <p><span>Value:</span> $<%= t.value %></p>
+                    </li>
+                <% }) %>
+            <% } else { %>
+                <h1 class="mt-2">No transactions found</h1>
+            <% } %>    
+        </ul>
+    </main>
+</body>
+</html>

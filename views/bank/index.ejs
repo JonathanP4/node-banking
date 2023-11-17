@@ -1,0 +1,21 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <main>
+        <% if(message) { %>
+                <p class="msg--error"><%= message %></p>
+            <% } %>
+        <div class="hero">
+            <div>
+                <h1>Welcome to Node Banking</h1>
+                <p>
+                    Your trusted financial companion in the digital age. At Node Banking, we're committed to simplifying your financial journey, providing you with the tools and resources to achieve your financial goals, and ensuring your peace of mind every step of the way.
+                </p>
+            </div>
+            <img src="https://media.istockphoto.com/id/1352603244/photo/shot-of-an-unrecognizable-businessman-working-on-his-laptop-in-the-office.jpg?s=612x612&w=0&k=20&c=upiDYeAZEsxbUBdhX35MXm79drIXA-5Q-FcfmZk71lM=" alt="">
+        </div>
+    </main>
+</body>
+</html>

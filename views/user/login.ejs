@@ -1,0 +1,27 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <main>
+        <% if(message) { %>
+            <p class="msg--error"><%= message %></p>
+        <% } %>
+        <div class="form-control">
+            <h1>Login</h1>
+            <form action="/user/login" method="post" novalidate>
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. example@gmail.com">
+                </div>
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <button type="submit">Submit</button>
+            </form> 
+        </div>
+    </main>
+</body>
+</html>

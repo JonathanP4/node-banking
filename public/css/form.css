@@ -1,0 +1,36 @@
+main {
+    text-align: left;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form:not(.form--logout) {
+    margin-top: 2rem;
+    min-width: 25rem;
+    display: grid;
+    gap: 1.5rem;
+
+    & input,
+    textarea {
+        padding: 0.5rem 1rem;
+        resize: none;
+    }
+
+    & button {
+        cursor: pointer;
+        max-width: fit-content;
+        padding: 0.5rem 1rem;
+        transition: all 150ms;
+
+        &:hover {
+            background: var(--green-600);
+            color: white;
+        }
+    }
+
+    & .input-control {
+        display: grid;
+    }
+}

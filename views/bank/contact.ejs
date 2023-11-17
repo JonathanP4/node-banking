@@ -1,0 +1,28 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <%- include('../includes/nav.ejs') %>
+    <main>
+        <div class="form-control">
+            <h1>Contact Us</h1>
+            <form action="/contact" method="post">
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. example@gmail.com">
+                </div>
+                <div class="input-control">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. John Doe">
+                </div>
+                <div class="input-control">
+                    <label for="text">Subject</label>
+                    <textarea name="text" id="text" cols="30" rows="6"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form> 
+        </div>
+    </main>
+</body>
+</html>

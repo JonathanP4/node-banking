@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    --green-900: #14532d;
+    --green-800: #166534;
+    --green-700: #15803d;
+    --green-600: #16a34a;
+    --green-500: #22c55e;
+    --green-400: #4ade80;
+    --slate-900: #0f172a;
+    --slate-800: #1e293b;
+    --slate-700: #334155;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--slate-900);
+    color: var(--green-400);
+    font-family: "Montserrat", sans-serif;
+}
+
+main {
+    padding: 2rem;
+}
+
+img,
+svg,
+figure {
+    max-width: 100%;
+}
+
+button {
+    display: inline-block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+input,
+button:not(.btn--logout),
+textarea {
+    outline: 0;
+    border: 1px solid var(--green-800);
+    background: var(--slate-700);
+    font-size: 1rem;
+    color: var(--green-600);
+    font-family: "Montserrat";
+
+    &:focus {
+        outline: 1px solid var(--green-600);
+        border-color: var(--green-600);
+    }
+}
+
+label {
+    margin-bottom: 0.3rem;
+}
+
+::placeholder {
+    opacity: 0.6;
+    color: var(--green-400);
+}
+
+.msg--error {
+    color: red;
+    text-align: left;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero {
+    padding: 0 2rem;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+    & h1 {
+        font-size: 3rem;
+    }
+
+    & p {
+        font-size: 1.15rem;
+        line-height: 1.5;
+    }
+
+    & img {
+        border-radius: 0.5rem;
+    }
+}
+
+.btn--logout {
+    background: none;
+    border: 0;
+    color: var(--green-400);
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.red {
+    color: red;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
